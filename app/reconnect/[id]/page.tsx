@@ -3,6 +3,9 @@ import { notFound } from 'next/navigation';
 import { PageChrome } from '@/components/page-chrome';
 import { getFragment, personThreads } from '@/lib/demo-data';
 
+const focusRing =
+  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--warm)] focus-visible:ring-offset-2 focus-visible:ring-offset-[#08111f]';
+
 export default async function ReconnectPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const fragment = getFragment(id);
@@ -19,7 +22,10 @@ export default async function ReconnectPage({ params }: { params: Promise<{ id: 
       title={`Return to ${person.name} without making it heavy.`}
       subtitle="The product suggests small, emotionally safe next steps for people-related fragments. Nothing is framed as mandatory."
       actions={
-        <Link href={`/fragments/${fragment.id}`} className="rounded-full border border-white/12 bg-white/5 px-5 py-3 text-sm font-semibold text-white/82">
+        <Link
+          href={`/fragments/${fragment.id}`}
+          className={`rounded-full border border-white/12 bg-white/5 px-5 py-3 text-sm font-semibold text-white/82 ${focusRing}`}
+        >
           Back to fragment
         </Link>
       }
@@ -48,15 +54,24 @@ export default async function ReconnectPage({ params }: { params: Promise<{ id: 
       <div className="mt-8 glass-panel rounded-[34px] p-6">
         <p className="section-kicker">Decision framing</p>
         <div className="mt-4 grid gap-4 md:grid-cols-3">
-          <button type="button" className="rounded-[24px] bg-[var(--warm)] px-5 py-4 text-sm font-semibold text-slate-950">
-            Reach out now
-          </button>
-          <button type="button" className="rounded-[24px] border border-white/12 bg-white/5 px-5 py-4 text-sm font-semibold text-white/78">
-            Save for a better moment
-          </button>
-          <button type="button" className="rounded-[24px] border border-white/12 bg-white/5 px-5 py-4 text-sm font-semibold text-white/56">
-            Let this rest
-          </button>
+          <Link
+            href={`/fragments/${fragment.id}`}
+            className={`rounded-[24px] bg-[var(--warm)] px-5 py-4 text-sm font-semibold text-slate-950 ${focusRing}`}
+          >
+            Keep this message in view
+          </Link>
+          <Link
+            href="/reflection"
+            className={`rounded-[24px] border border-white/12 bg-white/5 px-5 py-4 text-sm font-semibold text-white/78 ${focusRing}`}
+          >
+            Save for a gentler moment
+          </Link>
+          <Link
+            href="/demo"
+            className={`rounded-[24px] border border-white/12 bg-white/5 px-5 py-4 text-sm font-semibold text-white/56 ${focusRing}`}
+          >
+            Return to rediscovery feed
+          </Link>
         </div>
       </div>
     </PageChrome>

@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import { constellations } from '@/lib/demo-data';
 
+const focusRing =
+  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--warm)] focus-visible:ring-offset-2 focus-visible:ring-offset-[#08111f]';
+
 export default function HomePage() {
   return (
     <div className="relative min-h-screen overflow-hidden">
@@ -12,11 +15,38 @@ export default function HomePage() {
             </span>
             CONSTELLATION
           </div>
+
+          <div className="md:hidden">
+            <details className="group relative">
+              <summary
+                className={`list-none rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white/82 ${focusRing}`}
+              >
+                Menu
+              </summary>
+              <div className="glass-panel absolute right-0 z-20 mt-3 w-48 rounded-[24px] p-3">
+                <div className="flex flex-col gap-2">
+                  <Link href="/onboarding" className={`rounded-[18px] px-3 py-2 text-sm text-white/74 transition hover:bg-white/6 hover:text-white ${focusRing}`}>
+                    Onboarding
+                  </Link>
+                  <Link href="/demo" className={`rounded-[18px] px-3 py-2 text-sm text-white/74 transition hover:bg-white/6 hover:text-white ${focusRing}`}>
+                    Prototype
+                  </Link>
+                  <Link href="/privacy" className={`rounded-[18px] px-3 py-2 text-sm text-white/74 transition hover:bg-white/6 hover:text-white ${focusRing}`}>
+                    Trust
+                  </Link>
+                  <a href="https://github.com/Rohan5commit/constellation" className={`rounded-[18px] px-3 py-2 text-sm text-white/74 transition hover:bg-white/6 hover:text-white ${focusRing}`}>
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </details>
+          </div>
+
           <div className="hidden items-center gap-5 md:flex">
-            <Link href="/onboarding" className="hover:text-white">Onboarding</Link>
-            <Link href="/demo" className="hover:text-white">Prototype</Link>
-            <Link href="/privacy" className="hover:text-white">Trust</Link>
-            <a href="https://github.com/Rohan5commit/constellation" className="hover:text-white">GitHub</a>
+            <Link href="/onboarding" className={`hover:text-white ${focusRing}`}>Onboarding</Link>
+            <Link href="/demo" className={`hover:text-white ${focusRing}`}>Prototype</Link>
+            <Link href="/privacy" className={`hover:text-white ${focusRing}`}>Trust</Link>
+            <a href="https://github.com/Rohan5commit/constellation" className={`hover:text-white ${focusRing}`}>GitHub</a>
           </div>
         </nav>
 
@@ -33,10 +63,10 @@ export default function HomePage() {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Link href="/demo" className="rounded-full bg-[var(--warm)] px-6 py-3.5 text-sm font-semibold text-slate-950 transition hover:brightness-105">
+              <Link href="/demo" className={`rounded-full bg-[var(--warm)] px-6 py-3.5 text-sm font-semibold text-slate-950 transition hover:brightness-105 ${focusRing}`}>
                 Enter the prototype
               </Link>
-              <Link href="/onboarding" className="rounded-full border border-white/14 bg-white/6 px-6 py-3.5 text-sm font-semibold text-white/84 transition hover:border-white/22">
+              <Link href="/onboarding" className={`rounded-full border border-white/14 bg-white/6 px-6 py-3.5 text-sm font-semibold text-white/84 transition hover:border-white/22 ${focusRing}`}>
                 See the journey
               </Link>
             </div>
@@ -168,10 +198,10 @@ export default function HomePage() {
               The product story is visible from the first screen, the interaction model is distinctive, and the repository contains the research, process, prototype, and talk track needed for a strong designathon submission.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/demo" className="rounded-full bg-[var(--warm)] px-5 py-3 text-sm font-semibold text-slate-950">
+              <Link href="/demo" className={`rounded-full bg-[var(--warm)] px-5 py-3 text-sm font-semibold text-slate-950 ${focusRing}`}>
                 Open the live prototype
               </Link>
-              <a href="https://github.com/Rohan5commit/constellation" className="rounded-full border border-white/14 bg-white/5 px-5 py-3 text-sm font-semibold text-white/84">
+              <a href="https://github.com/Rohan5commit/constellation" className={`rounded-full border border-white/14 bg-white/5 px-5 py-3 text-sm font-semibold text-white/84 ${focusRing}`}>
                 Review the repo
               </a>
             </div>

@@ -15,8 +15,8 @@ The concept was framed around fragmentation, context loss, and emotional overloa
 **Demo / Prototype Link**  
 [https://constellation-bice.vercel.app](https://constellation-bice.vercel.app)
 
-**Figma Prototype Link**  
-[https://www.figma.com/design/BnKMAQqEDTpeFly7lp0bLN?node-id=2-2](https://www.figma.com/design/BnKMAQqEDTpeFly7lp0bLN?node-id=2-2)
+**Figma Working File**  
+Currently team-only. Update Figma share permissions before using it as an external submission link.
 
 **Devpost Reminder**  
 Before final submission, confirm that **all team members are added correctly on Devpost** and that the live prototype link is updated everywhere this placeholder appears.
