@@ -54,8 +54,10 @@ export default function HomePage() {
           <div className="space-y-8">
             <div className="space-y-4">
               <p className="section-kicker">UCI Design-a-thon 2026 · Lost & Found</p>
-              <h1 className="text-glow max-w-4xl font-[var(--font-serif)] text-6xl leading-[0.9] text-white md:text-[6.4rem]">
-                The things we lose online are rarely files. <span className="gradient-text">They are meanings.</span>
+              <h1 className="text-glow max-w-4xl font-[var(--font-serif)] text-6xl leading-[0.98] text-white md:text-[6rem]">
+                <span className="block">The things we lose online</span>
+                <span className="mt-1 block">are rarely files.</span>
+                <span className="hero-accent mt-1.5 block">They are meanings.</span>
               </h1>
               <p className="max-w-2xl text-lg leading-8 text-white/72 md:text-xl">
                 Constellation helps people recover forgotten ideas, moments, and relationships from scattered digital fragments before they disappear into the background noise of daily life.

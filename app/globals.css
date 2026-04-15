@@ -118,6 +118,11 @@ textarea {
   -webkit-text-fill-color: transparent;
 }
 
+.hero-accent {
+  color: var(--warm);
+  text-shadow: 0 0 24px rgba(255, 212, 172, 0.14);
+}
+
 @keyframes drift {
   0% {
     transform: translate3d(0, 0, 0);
