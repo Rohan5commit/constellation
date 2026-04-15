@@ -4,8 +4,8 @@
 An AI-assisted space for recovering forgotten ideas, moments, and connections from scattered digital fragments before they disappear.
 
 **Prototype**  
-Web prototype link: `TBD after deployment`  
-Figma prototype link: `TBD after Figma build`
+Web prototype link: [https://constellation-bice.vercel.app](https://constellation-bice.vercel.app)  
+Figma prototype link: [Constellation Designathon Prototype](https://www.figma.com/design/BnKMAQqEDTpeFly7lp0bLN?node-id=2-2)
 
 ## Theme Fit
 
@@ -80,7 +80,8 @@ This repository is configured to deploy from **GitHub Actions to Vercel**.
 1. Push to `main`.
 2. GitHub Actions runs `.github/workflows/verify.yml` to type-check and build.
 3. GitHub Actions runs `.github/workflows/deploy.yml` to publish production on Vercel.
-4. Replace the prototype placeholders in `README.md` and `SUBMISSION_SUMMARY.md` with the production URL after the first successful deploy.
+4. Public prototype: [https://constellation-bice.vercel.app](https://constellation-bice.vercel.app)
+5. Figma walkthrough artifact: [https://www.figma.com/design/BnKMAQqEDTpeFly7lp0bLN?node-id=2-2](https://www.figma.com/design/BnKMAQqEDTpeFly7lp0bLN?node-id=2-2)
 
 ### Why This Path Was Chosen
 
@@ -119,14 +120,23 @@ If the variables are blank, the app falls back to seeded demo responses so the j
 
 ## Screenshots
 
-Replace this section before final submission with exported screenshots or GIFs from the deployed prototype and Figma file.
+### Landing page
+![Landing page](./public/screenshots/landing.png)
 
-- `TODO: Landing page hero`
-- `TODO: Rediscovery feed`
-- `TODO: Constellation view`
-- `TODO: Fragment detail and why resurfaced`
-- `TODO: Reconnect flow`
-- `TODO: Weekly reflection`
+### Rediscovery feed
+![Rediscovery feed](./public/screenshots/demo-feed.png)
+
+### Constellation view
+![Constellation view](./public/screenshots/constellation-view.png)
+
+### Fragment detail
+![Fragment detail](./public/screenshots/fragment-detail.png)
+
+### Reconnect flow
+![Reconnect flow](./public/screenshots/reconnect-flow.png)
+
+### Weekly reflection
+![Weekly reflection](./public/screenshots/reflection.png)
 
 ## Research Integrity
 
@@ -146,7 +156,6 @@ The following files are structured so the team can add real evidence fast:
 - Actual interview notes and synthesis
 - Real usability test findings and iteration decisions
 - Any claims about preference, pain intensity, or behavior frequency that currently rely on design hypotheses
-- Final screenshots and live prototype URL placeholders
 
 ## Credits
 

@@ -13,10 +13,10 @@ Constellation is an AI-assisted rediscovery system that helps users gather forgo
 The concept was framed around fragmentation, context loss, and emotional overload. The process prioritizes research visibility, opportunity mapping, clear user flows, prototype-driven storytelling, and fast validation artifacts that can be completed with real interviews before judging.
 
 **Demo / Prototype Link**  
-`TBD after deployment`
+[https://constellation-bice.vercel.app](https://constellation-bice.vercel.app)
 
 **Figma Prototype Link**  
-`TBD after Figma build`
+[https://www.figma.com/design/BnKMAQqEDTpeFly7lp0bLN?node-id=2-2](https://www.figma.com/design/BnKMAQqEDTpeFly7lp0bLN?node-id=2-2)
 
 **Devpost Reminder**  
 Before final submission, confirm that **all team members are added correctly on Devpost** and that the live prototype link is updated everywhere this placeholder appears.
