@@ -1,3 +1,5 @@
+import type { Route } from 'next';
+
 export type FragmentType = 'note' | 'screenshot' | 'link' | 'voice' | 'memory' | 'reminder';
 
 export type Fragment = {
@@ -13,7 +15,7 @@ export type Fragment = {
   whyResurfaced: string;
   whyItMayMatter: string;
   nextStepLabel: string;
-  nextStepHref: string;
+  nextStepHref: Route;
   people?: string[];
   project?: string;
   place?: string;

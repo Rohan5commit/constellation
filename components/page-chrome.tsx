@@ -1,6 +1,7 @@
+import type { Route } from 'next';
 import Link from 'next/link';
 
-const navigation = [
+const navigation: Array<{ href: Route; label: string }> = [
   { href: '/', label: 'Story' },
   { href: '/onboarding', label: 'Onboarding' },
   { href: '/demo', label: 'Prototype' },

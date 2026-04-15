@@ -22,7 +22,7 @@ export function FragmentBadge({ type }: { type: Fragment['type'] }) {
 export function FragmentCard({ fragment, featured = false }: { fragment: Fragment; featured?: boolean }) {
   return (
     <Link
-      href={fragment.nextStepHref.startsWith('/') ? fragment.nextStepHref : `/fragments/${fragment.id}`}
+      href={fragment.nextStepHref}
       className={`glass-panel group block rounded-[28px] p-5 transition hover:-translate-y-1 hover:border-white/20 ${
         featured ? 'h-full' : ''
       }`}
