@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #08111f;
+  --bg-soft: #0d182a;
+  --surface: rgba(11, 19, 34, 0.74);
+  --surface-strong: rgba(15, 28, 48, 0.92);
+  --stroke: rgba(255, 255, 255, 0.12);
+  --text: #f8f4ed;
+  --muted: #b7bfd2;
+  --warm: #ffd4ac;
+  --sky: #bfe0ff;
+  --lavender: #d6c3ff;
+  --shadow: 0 32px 90px rgba(2, 8, 23, 0.42);
+  --font-sans: var(--font-manrope), system-ui, sans-serif;
+  --font-serif: var(--font-cormorant), Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at 20% 18%, rgba(169, 143, 255, 0.14), transparent 28%),
+    radial-gradient(circle at 84% 14%, rgba(255, 214, 168, 0.16), transparent 24%),
+    radial-gradient(circle at 52% 82%, rgba(126, 205, 255, 0.11), transparent 32%),
+    linear-gradient(180deg, #08111f 0%, #091626 42%, #0b1624 100%);
+  color: var(--text);
+  font-family: var(--font-sans);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(191, 224, 255, 0.32);
+  color: var(--text);
+}
+
+.starfield::before,
+.starfield::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.65) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 35% 80%, rgba(191, 224, 255, 0.8) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 72% 30%, rgba(255, 212, 172, 0.78) 0 1.1px, transparent 1.8px),
+    radial-gradient(circle at 88% 68%, rgba(214, 195, 255, 0.6) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 56% 46%, rgba(255, 255, 255, 0.32) 0 1px, transparent 1.8px);
+  opacity: 0.45;
+  animation: drift 26s linear infinite;
+}
+
+.starfield::after {
+  opacity: 0.22;
+  filter: blur(0.5px);
+  animation-duration: 34s;
+  animation-direction: reverse;
+}
+
+.glass-panel {
+  border: 1px solid var(--stroke);
+  background: linear-gradient(180deg, rgba(19, 32, 53, 0.78) 0%, rgba(9, 16, 29, 0.92) 100%);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.section-kicker {
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.hero-glow {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 24px 80px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.fine-border {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.orbit-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.text-glow {
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.08);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #f9f4ea 0%, #ffd5ad 36%, #cfe6ff 70%, #d8c7ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes drift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(14px, -18px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
