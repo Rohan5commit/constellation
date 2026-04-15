@@ -1,3 +1,4 @@
+import type { Route } from 'next';
 import Link from 'next/link';
 import type { Fragment } from '@/lib/demo-data';
 
@@ -22,7 +23,7 @@ export function FragmentBadge({ type }: { type: Fragment['type'] }) {
 export function FragmentCard({ fragment, featured = false }: { fragment: Fragment; featured?: boolean }) {
   return (
     <Link
-      href={fragment.nextStepHref}
+      href={fragment.nextStepHref as Route}
       className={`glass-panel group block rounded-[28px] p-5 transition hover:-translate-y-1 hover:border-white/20 ${
         featured ? 'h-full' : ''
       }`}

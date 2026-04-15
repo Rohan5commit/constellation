@@ -1,5 +1,6 @@
 'use client';
 
+import type { Route } from 'next';
 import Link from 'next/link';
 import { motion, useReducedMotion } from 'framer-motion';
 import type { Constellation, Fragment } from '@/lib/demo-data';
@@ -50,7 +51,7 @@ export function ConstellationMap({
             className="absolute"
             style={{ left: point.x, top: point.y, transform: 'translate(-50%, -50%)' }}
           >
-            <Link href={fragment.nextStepHref} className="glass-panel block w-52 rounded-[24px] p-4 transition hover:-translate-y-1 hover:border-white/18">
+            <Link href={fragment.nextStepHref as Route} className="glass-panel block w-52 rounded-[24px] p-4 transition hover:-translate-y-1 hover:border-white/18">
               <div className="space-y-3">
                 <div className="flex items-center justify-between gap-3">
                   <FragmentBadge type={fragment.type} />

@@ -1,3 +1,4 @@
+import type { Route } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { FragmentBadge, FragmentCard } from '@/components/fragment-card';
@@ -22,7 +23,7 @@ export default async function FragmentPage({ params }: { params: Promise<{ id: s
       title={fragment.title}
       subtitle={fragment.preview}
       actions={
-        <Link href={`/constellations/${fragment.constellation}`} className="rounded-full border border-white/12 bg-white/5 px-5 py-3 text-sm font-semibold text-white/82">
+        <Link href={`/constellations/${fragment.constellation}` as Route} className="rounded-full border border-white/12 bg-white/5 px-5 py-3 text-sm font-semibold text-white/82">
           Back to constellation
         </Link>
       }
@@ -72,7 +73,7 @@ export default async function FragmentPage({ params }: { params: Promise<{ id: s
           <div className="glass-panel rounded-[34px] p-6">
             <p className="section-kicker">What to do next</p>
             <div className="mt-4 space-y-4">
-              <Link href={fragment.nextStepHref} className="block rounded-[24px] bg-[var(--warm)] px-5 py-4 text-sm font-semibold text-slate-950">
+              <Link href={fragment.nextStepHref as Route} className="block rounded-[24px] bg-[var(--warm)] px-5 py-4 text-sm font-semibold text-slate-950">
                 {fragment.nextStepLabel}
               </Link>
               <button type="button" className="w-full rounded-[24px] border border-white/12 bg-white/5 px-5 py-4 text-left text-sm font-semibold text-white/78">
@@ -88,7 +89,7 @@ export default async function FragmentPage({ params }: { params: Promise<{ id: s
             <div className="glass-panel rounded-[34px] p-6">
               <p className="section-kicker">Reconnect gently</p>
               <p className="mt-4 text-sm leading-7 text-white/72">{primaryPerson.lowPressurePrompt}</p>
-              <Link href={`/reconnect/${fragment.id}`} className="mt-5 inline-flex text-sm font-semibold text-[var(--warm)]">
+              <Link href={`/reconnect/${fragment.id}` as Route} className="mt-5 inline-flex text-sm font-semibold text-[var(--warm)]">
                 Open reconnect suggestions
               </Link>
             </div>

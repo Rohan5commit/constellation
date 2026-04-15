@@ -1,5 +1,6 @@
 'use client';
 
+import type { Route } from 'next';
 import Link from 'next/link';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { useMemo, useState } from 'react';
@@ -67,7 +68,7 @@ export function DemoDashboard({ initialFragments, constellationList }: DemoDashb
               </div>
               <div className="flex flex-wrap gap-3">
                 <Link
-                  href={spotlight.nextStepHref}
+                  href={spotlight.nextStepHref as Route}
                   className="rounded-full bg-[var(--warm)] px-5 py-3 text-sm font-semibold text-slate-950 transition hover:brightness-105"
                 >
                   Open resurfaced fragment
