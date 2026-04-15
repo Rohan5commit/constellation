@@ -59,7 +59,7 @@ The first screen makes that premise legible immediately: forgotten fragments are
 ├── components/
 ├── lib/
 ├── public/
-└── .env.example
+└── .github/workflows/
 ```
 
 ## Prototype Setup
@@ -73,20 +73,18 @@ Open `http://localhost:3000`.
 
 ## Deployment Instructions
 
-### GitHub to Vercel
+### Current GitHub to Vercel Path
 
-1. Import this repository into Vercel.
-2. Set the environment variables from `.env.example` only if you want live NVIDIA NIM responses.
-3. Deploy the project with the **Next.js** framework preset.
-4. Replace the prototype placeholders in `README.md` and `SUBMISSION_SUMMARY.md` with the production URL.
+This repository is configured to deploy from **GitHub Actions to Vercel**.
 
-### Judging Demo Recommendation
+1. Push to `main`.
+2. GitHub Actions runs `.github/workflows/verify.yml` to type-check and build.
+3. GitHub Actions runs `.github/workflows/deploy.yml` to publish production on Vercel.
+4. Replace the prototype placeholders in `README.md` and `SUBMISSION_SUMMARY.md` with the production URL after the first successful deploy.
 
-- Start on `/`
-- Continue to `/onboarding`
-- Enter the seeded prototype via `/demo`
-- Open one constellation, then one resurfaced fragment
-- End on `/reconnect/[id]` or `/reflection`
+### Why This Path Was Chosen
+
+The repository does not depend on local linking or manual Vercel dashboard import. It stays GitHub-first and can later be switched to native Vercel Git integration if the Vercel GitHub App is installed on the account.
 
 ## NVIDIA NIM Setup
 
@@ -116,6 +114,7 @@ If the variables are blank, the app falls back to seeded demo responses so the j
 - **Motion:** Framer Motion for subtle reveal, clustering, and feedback moments
 - **Data layer:** seeded in-memory demo data from `lib/demo-data.ts`
 - **AI integration:** optional `app/api/nim/route.ts` with safe, explicit fallbacks
+- **Deployment:** GitHub Actions + Vercel production deploys
 - **Design strategy:** landing + guided onboarding + route-based demo narrative
 
 ## Screenshots
